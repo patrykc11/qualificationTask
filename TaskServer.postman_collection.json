@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "6f770b82-4ed8-4896-8df8-1e77f9f87d54",
+		"name": "TaskServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/musicRecords/allTracks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"{\r",
+							"  \"timeToAsk\": 0,\r",
+							"  \"hubConfig\": {\r",
+							"    \"type\": 0,\r",
+							"    \"statusByte\": 0,\r",
+							"    \"deviceAddress\": 0,\r",
+							"    \"serialNumber\": \"string\",\r",
+							"    \"productionYear\": 0,\r",
+							"    \"version\": \"string\",\r",
+							"    \"analogInputs\": 0,\r",
+							"    \"bistableInputs\": 0,\r",
+							"    \"bistableOutputs\": 0,\r",
+							"    \"name\": \"string\",\r",
+							"    \"numCom\": 0\r",
+							"  },\r",
+							"  \"channels\": [\r",
+							"    0\r",
+							"  ],\r",
+							"  \"inputsOutputs\": 0,\r",
+							"  \"sensors\": [\r",
+							"    {\r",
+							"      \"dotPos\": 0,\r",
+							"      \"startPos\": \"string\",\r",
+							"      \"name\": \"string\",\r",
+							"      \"type\": 0,\r",
+							"      \"address\": 0,\r",
+							"      \"serialNumber\": \"string\",\r",
+							"      \"productionYear\": 0,\r",
+							"      \"color\": \"string\",\r",
+							"      \"minCriticalValue\": 0,\r",
+							"      \"minValue\": 0,\r",
+							"      \"maxValue\": 0,\r",
+							"      \"maxCriticalValue\": 0,\r",
+							"      \"width\": 0,\r",
+							"      \"height\": 0,\r",
+							"      \"positionX\": 0,\r",
+							"      \"positionY\": 0,\r",
+							"      \"mapNumber\": 0\r",
+							"    }\r",
+							"  ]\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/musicRecords/allTracks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"musicRecords",
+						"allTracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/musicRecords/allArtistsFromGenre",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"{\r",
+							"  \"timeToAsk\": 0,\r",
+							"  \"hubConfig\": {\r",
+							"    \"type\": 0,\r",
+							"    \"statusByte\": 0,\r",
+							"    \"deviceAddress\": 0,\r",
+							"    \"serialNumber\": \"string\",\r",
+							"    \"productionYear\": 0,\r",
+							"    \"version\": \"string\",\r",
+							"    \"analogInputs\": 0,\r",
+							"    \"bistableInputs\": 0,\r",
+							"    \"bistableOutputs\": 0,\r",
+							"    \"name\": \"string\",\r",
+							"    \"numCom\": 0\r",
+							"  },\r",
+							"  \"channels\": [\r",
+							"    0\r",
+							"  ],\r",
+							"  \"inputsOutputs\": 0,\r",
+							"  \"sensors\": [\r",
+							"    {\r",
+							"      \"dotPos\": 0,\r",
+							"      \"startPos\": \"string\",\r",
+							"      \"name\": \"string\",\r",
+							"      \"type\": 0,\r",
+							"      \"address\": 0,\r",
+							"      \"serialNumber\": \"string\",\r",
+							"      \"productionYear\": 0,\r",
+							"      \"color\": \"string\",\r",
+							"      \"minCriticalValue\": 0,\r",
+							"      \"minValue\": 0,\r",
+							"      \"maxValue\": 0,\r",
+							"      \"maxCriticalValue\": 0,\r",
+							"      \"width\": 0,\r",
+							"      \"height\": 0,\r",
+							"      \"positionX\": 0,\r",
+							"      \"positionY\": 0,\r",
+							"      \"mapNumber\": 0\r",
+							"    }\r",
+							"  ]\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibG9naW4iOiJwY2VibyIsImVtYWlsIjoicGF0cnlrY2VibzExQGdtYWlsLmNvbSIsInN0YXR1cyI6InVzZXIiLCJpYXQiOjE2Mzg0Nzg3NTYsImV4cCI6MTYzOTA4MzU1Nn0.99-4qL9lzADHh3xbXwH3DijHtzHHS6gMaPlNw7PLLpY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"pcebo\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/musicRecords/allArtistsFromGenre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"musicRecords",
+						"allArtistsFromGenre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/musicRecords/amoutOfTracksFromArtists",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"{\r",
+							"  \"timeToAsk\": 0,\r",
+							"  \"hubConfig\": {\r",
+							"    \"type\": 0,\r",
+							"    \"statusByte\": 0,\r",
+							"    \"deviceAddress\": 0,\r",
+							"    \"serialNumber\": \"string\",\r",
+							"    \"productionYear\": 0,\r",
+							"    \"version\": \"string\",\r",
+							"    \"analogInputs\": 0,\r",
+							"    \"bistableInputs\": 0,\r",
+							"    \"bistableOutputs\": 0,\r",
+							"    \"name\": \"string\",\r",
+							"    \"numCom\": 0\r",
+							"  },\r",
+							"  \"channels\": [\r",
+							"    0\r",
+							"  ],\r",
+							"  \"inputsOutputs\": 0,\r",
+							"  \"sensors\": [\r",
+							"    {\r",
+							"      \"dotPos\": 0,\r",
+							"      \"startPos\": \"string\",\r",
+							"      \"name\": \"string\",\r",
+							"      \"type\": 0,\r",
+							"      \"address\": 0,\r",
+							"      \"serialNumber\": \"string\",\r",
+							"      \"productionYear\": 0,\r",
+							"      \"color\": \"string\",\r",
+							"      \"minCriticalValue\": 0,\r",
+							"      \"minValue\": 0,\r",
+							"      \"maxValue\": 0,\r",
+							"      \"maxCriticalValue\": 0,\r",
+							"      \"width\": 0,\r",
+							"      \"height\": 0,\r",
+							"      \"positionX\": 0,\r",
+							"      \"positionY\": 0,\r",
+							"      \"mapNumber\": 0\r",
+							"    }\r",
+							"  ]\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibG9naW4iOiJwY2VibyIsImVtYWlsIjoicGF0cnlrY2VibzExQGdtYWlsLmNvbSIsInN0YXR1cyI6InVzZXIiLCJpYXQiOjE2Mzg0Nzg3NTYsImV4cCI6MTYzOTA4MzU1Nn0.99-4qL9lzADHh3xbXwH3DijHtzHHS6gMaPlNw7PLLpY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"pcebo\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/musicRecords/amoutOfTracksFromArtists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"musicRecords",
+						"amoutOfTracksFromArtists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/musicRecords/allAlbumsFromArtist?artistName=AC/DC",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"{\r",
+							"  \"timeToAsk\": 0,\r",
+							"  \"hubConfig\": {\r",
+							"    \"type\": 0,\r",
+							"    \"statusByte\": 0,\r",
+							"    \"deviceAddress\": 0,\r",
+							"    \"serialNumber\": \"string\",\r",
+							"    \"productionYear\": 0,\r",
+							"    \"version\": \"string\",\r",
+							"    \"analogInputs\": 0,\r",
+							"    \"bistableInputs\": 0,\r",
+							"    \"bistableOutputs\": 0,\r",
+							"    \"name\": \"string\",\r",
+							"    \"numCom\": 0\r",
+							"  },\r",
+							"  \"channels\": [\r",
+							"    0\r",
+							"  ],\r",
+							"  \"inputsOutputs\": 0,\r",
+							"  \"sensors\": [\r",
+							"    {\r",
+							"      \"dotPos\": 0,\r",
+							"      \"startPos\": \"string\",\r",
+							"      \"name\": \"string\",\r",
+							"      \"type\": 0,\r",
+							"      \"address\": 0,\r",
+							"      \"serialNumber\": \"string\",\r",
+							"      \"productionYear\": 0,\r",
+							"      \"color\": \"string\",\r",
+							"      \"minCriticalValue\": 0,\r",
+							"      \"minValue\": 0,\r",
+							"      \"maxValue\": 0,\r",
+							"      \"maxCriticalValue\": 0,\r",
+							"      \"width\": 0,\r",
+							"      \"height\": 0,\r",
+							"      \"positionX\": 0,\r",
+							"      \"positionY\": 0,\r",
+							"      \"mapNumber\": 0\r",
+							"    }\r",
+							"  ]\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibG9naW4iOiJwY2VibyIsImVtYWlsIjoicGF0cnlrY2VibzExQGdtYWlsLmNvbSIsInN0YXR1cyI6InVzZXIiLCJpYXQiOjE2Mzg0Nzg3NTYsImV4cCI6MTYzOTA4MzU1Nn0.99-4qL9lzADHh3xbXwH3DijHtzHHS6gMaPlNw7PLLpY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"pcebo\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/musicRecords/allAlbumsFromArtist?artistName=AC/DC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"musicRecords",
+						"allAlbumsFromArtist"
+					],
+					"query": [
+						{
+							"key": "artistName",
+							"value": "AC/DC"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,5 @@
+Questions/comments
+1. .env file needs to be in .gitignore file but for this task I did not do that.
+2. I had a problem with relationMappings with function named "withGraphJoined". I could not get data from database by this relation, if I got data, I could not appeal to the keys from objects. I think the reason is primary and foreign keys but I could not find why.
+3. In normal projects, I use seeds and migrations to create and complete a database of test data. I also use server-side encryption of the content of responses with AES encryption and to authenticate users I use JSON Web Tokens.
+4. As far as the task is concerned, the first sub-item is quite understandable, while the second and third points were somewhat questionable. I realized the second sub-item so that the server answers each artist’s request with the number of pieces of music and the piece of music is a piece whose media_types differs from 3. In the third point in the query I send the name of the artist (I think it should send an ID when it comes to the production solution) and the server returns the list of the artist’s albums.
