@@ -1,12 +1,12 @@
-const Model = require('objection').Model
-const knex = require('../Config/database')
+const Model = require("objection").Model;
+const knex = require("../Config/database");
 
-Model.knex(knex)
+Model.knex(knex);
 
-class Playlists extends Model{
-  static get tableName(){
-    return 'playlists'
+class Playlists extends Model {
+  static get tableName() {
+    return "playlists";
   }
 }
 
-module.exports = Playlists
+module.exports = Playlists;

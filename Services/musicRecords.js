@@ -14,7 +14,7 @@ class MusicRecordsService {
       let errorCode = 500;
       let allTracks = [];
       allTracks = await Tracks.query();
-      if(allTracks){
+      if (allTracks) {
         errorMessage = "Getting all tracks successfully";
         messageID = "11111";
         errorCode = 200;
@@ -32,16 +32,20 @@ class MusicRecordsService {
       let messageID = "00000";
       let errorCode = 500;
       let allArtists = [];
-      const ifGerneExists = await Genres.query().findOne("Name", genreName)
-      if (ifGerneExists === undefined){
+      const ifGerneExists = await Genres.query().findOne("Name", genreName);
+      if (ifGerneExists === undefined) {
         errorMessage = "Genre " + genreName + " does not exist";
         messageID = "00003";
         errorCode = 400;
         return [allArtists, errorMessage, messageID, errorCode];
       }
-      allArtists = await Artists.query().joinRelated('tracks').where('tracks.GenreId', ifGerneExists.GenreId).distinct('artists.Name').orderBy('artists.Name')
-      allArtists = allArtists.map( artist => artist.Name)
-      if(allArtists.length >= 0){
+      allArtists = await Artists.query()
+        .joinRelated("tracks")
+        .where("tracks.GenreId", ifGerneExists.GenreId)
+        .distinct("artists.Name")
+        .orderBy("artists.Name");
+      allArtists = allArtists.map((artist) => artist.Name);
+      if (allArtists.length >= 0) {
         errorMessage = "Getting all artists from gerne successfully";
         messageID = "11111";
         errorCode = 200;
@@ -49,7 +53,12 @@ class MusicRecordsService {
       return [allArtists, errorMessage, messageID, errorCode];
     } catch (err) {
       console.log(err);
-      throw new CustomError(503, "00002", "Get all artists from given gerne service unavailable", err.stack);
+      throw new CustomError(
+        503,
+        "00002",
+        "Get all artists from given gerne service unavailable",
+        err.stack
+      );
     }
   }
 
@@ -59,16 +68,20 @@ class MusicRecordsService {
       let messageID = "00000";
       let errorCode = 500;
       let allArtistsWithAmoutOFTracks = [];
-      
-      const artists = await Artists.query()
-      let trackList = []
-      for(let i = 0; i < artists.length; i++ ){
-        trackList = await Tracks.query().select().joinRelated('artists').where('artists.ArtistId', artists[i].ArtistId).whereNot('tracks.MediaTypeId', 3)
-        artists[i].amountOfMusicTracks = trackList.length
-        allArtistsWithAmoutOFTracks.push(artists[i])
+
+      const artists = await Artists.query();
+      let trackList = [];
+      for (let i = 0; i < artists.length; i++) {
+        trackList = await Tracks.query()
+          .select()
+          .joinRelated("artists")
+          .where("artists.ArtistId", artists[i].ArtistId)
+          .whereNot("tracks.MediaTypeId", 3);
+        artists[i].amountOfMusicTracks = trackList.length;
+        allArtistsWithAmoutOFTracks.push(artists[i]);
       }
-      
-      if(allArtistsWithAmoutOFTracks.length >= 0){
+
+      if (allArtistsWithAmoutOFTracks.length >= 0) {
         errorMessage = "Getting all counts successfully";
         messageID = "11111";
         errorCode = 200;
@@ -76,7 +89,12 @@ class MusicRecordsService {
       return [allArtistsWithAmoutOFTracks, errorMessage, messageID, errorCode];
     } catch (err) {
       console.log(err);
-      throw new CustomError(503, "00004", "Get amount of tracks from all artists service unavailable", err.stack);
+      throw new CustomError(
+        503,
+        "00004",
+        "Get amount of tracks from all artists service unavailable",
+        err.stack
+      );
     }
   }
 
@@ -86,15 +104,15 @@ class MusicRecordsService {
       let messageID = "00000";
       let errorCode = 500;
       let allAlbums = [];
-      const ifArtistExists = await Artists.query().findOne("Name", artistName)
-      if (ifArtistExists === undefined){
+      const ifArtistExists = await Artists.query().findOne("Name", artistName);
+      if (ifArtistExists === undefined) {
         errorMessage = "Artist " + artistName + " does not exist";
         messageID = "00006";
         errorCode = 400;
         return [allAlbums, errorMessage, messageID, errorCode];
       }
-      allAlbums = await Albums.query().where('ArtistId', ifArtistExists.ArtistId)
-      if(allAlbums.length >= 0){
+      allAlbums = await Albums.query().where("ArtistId", ifArtistExists.ArtistId);
+      if (allAlbums.length >= 0) {
         errorMessage = "Getting all albums from artist successfully";
         messageID = "11111";
         errorCode = 200;
@@ -102,7 +120,12 @@ class MusicRecordsService {
       return [allAlbums, errorMessage, messageID, errorCode];
     } catch (err) {
       console.log(err);
-      throw new CustomError(503, "00006", "Get all albums from given artist service unavailable", err.stack);
+      throw new CustomError(
+        503,
+        "00006",
+        "Get all albums from given artist service unavailable",
+        err.stack
+      );
     }
   }
 }

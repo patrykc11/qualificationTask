@@ -5,7 +5,10 @@ const bodyParser = require("body-parser");
 const logger = require("../Scripts/logger");
 const MusicRecordsService = require("../Services/musicRecords");
 const MusicRecordsServiceInstance = new MusicRecordsService();
-const { allArtistsFromGenreValidation, allAlbumsFromArtistValidation } = require("../Middleware/Validation/musicRecords");
+const {
+  allArtistsFromGenreValidation,
+  allAlbumsFromArtistValidation,
+} = require("../Middleware/Validation/musicRecords");
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
@@ -94,4 +97,4 @@ router.get("/allAlbumsFromArtist", allAlbumsFromArtistValidation, async function
   }
 });
 
-module.exports = router
+module.exports = router;

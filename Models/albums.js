@@ -1,6 +1,6 @@
 const Model = require("objection").Model;
 const knex = require("../Config/database");
-const Tracks = require('../Models/tracks')
+const Tracks = require("../Models/tracks");
 
 Model.knex(knex);
 
